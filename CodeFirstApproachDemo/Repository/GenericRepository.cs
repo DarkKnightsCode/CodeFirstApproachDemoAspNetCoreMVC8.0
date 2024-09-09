@@ -31,12 +31,12 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
     public void Update(T entity)
     {
         table.Attach(entity);
-        context.Entry(entity).State = EntityState.Modified;
+        context.Entry(entity).State = EntityState.Modified; 
     }
 
-    public void Delete(T entity)
+    public void Delete(int id)
     {
-        T existing = table.Find(entity);
+        T existing = table.Find(id);
         table.Remove(existing);
     }
 

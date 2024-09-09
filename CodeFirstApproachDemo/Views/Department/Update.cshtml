@@ -1,17 +1,18 @@
 ﻿@model CodeFirstApproachDemo.Models.Department
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Update";
 }
 
 <h1></h1>
 
-<h4>Create Department</h4>
+<h4>Update Department</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create" method="post">
+        <form asp-action="edit" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DepartmentId" />
             <div class="form-group">
                 <label asp-for="DepartmentName" class="control-label"></label>
                 <input asp-for="DepartmentName" class="form-control" />
@@ -24,14 +25,15 @@
             </div>
             <br />
             <div class="form-group">
-                <button type="submit" value="Create" class="btn btn-primary">Submit</button>
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <br />
-    <a asp-action="DepartmentList" class="btn btn-primary">Back to List</a>
+    <a asp-action="DepartmentList">
+        Back to List
+    </a>
 </div>
 

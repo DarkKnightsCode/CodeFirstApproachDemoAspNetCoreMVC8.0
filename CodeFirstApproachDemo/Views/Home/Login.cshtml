@@ -5,7 +5,7 @@
 }
 
 
-<h1 class="text-center">SignIn</h1>
+<h1 class="text-center">Login</h1>
 <div class="row justify-content-center">
     <div class="col-md-4">
         <div class="p-md-3 border">
@@ -19,7 +19,7 @@
             <br/>
             <div class="form-group">
                 @* <label asp-for="Password" class="control-label"></label> *@
-                <input asp-for="Password" class="form-control" placeholder="Enter User Password" />
+                <input type="password" asp-for="Password" class="form-control" placeholder="Enter User Password" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <br />

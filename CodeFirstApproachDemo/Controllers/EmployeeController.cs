@@ -3,7 +3,6 @@ using CodeFirstApproachDemo.Models.ViewModel;
 using CodeFirstApproachDemo.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Diagnostics;
 
 namespace CodeFirstApproachDemo.Controllers;
 public class EmployeeController : Controller

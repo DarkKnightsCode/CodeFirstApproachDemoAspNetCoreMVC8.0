@@ -33,11 +33,11 @@ public class HomeController : Controller
             if (ModelState.IsValid)
             {
                
-                    var obj = context.userCredentials.Where(a => a.UserName.Equals(request.UserName) && a.Password.Equals(request.Password)).FirstOrDefault();
-                    if (obj != null)
-                    {
-                        HttpContext.Session.SetString("UserName", obj.UserName.ToString());
-                        return RedirectToAction("Index", "Employee");
+                var obj = context.userCredentials.Where(a => a.UserName.Equals(request.UserName) && a.Password.Equals(request.Password)).FirstOrDefault();
+                if (obj != null)
+                {
+                    HttpContext.Session.SetString("UserName", obj.UserName.ToString());
+                    return RedirectToAction("Index", "Employee");
                 }
                
             }

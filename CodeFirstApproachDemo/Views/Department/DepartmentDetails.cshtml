@@ -1,0 +1,31 @@
+﻿@model CodeFirstApproachDemo.Models.Department
+
+@{
+    ViewData["Title"] = "DepartmentDetails";
+}
+
+<h4>Department Details</h4>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Department Name :
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DepartmentName)
+        </dd>
+        <dt class = "col-sm-2">
+           Department Code :
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DepartmentCode)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Update" asp-route-id="@Model?.DepartmentId"class="btn btn-primary">Edit</a>
+    <a asp-action="DepartmentList" class="btn btn-primary">
+       Back to List
+    </a>
+</div>
